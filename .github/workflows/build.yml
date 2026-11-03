@@ -31,6 +31,8 @@ jobs:
     - name: Build APK
       run: |
         flet build apk --verbose
+      env:
+        FLET_NONINTERACTIVE: "true"
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
